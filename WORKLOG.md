@@ -56,3 +56,35 @@ PUBLIC repositoryに非公開Sourceのrepository名、commit ID、blob IDを掲�
 commit・pushは本記録更新時点では未実施。最終結果はGit履歴と作業完了報告で確認する。
 
 ブラウザ表示・アプリ動作、GitHub独立readback、新規空チャットでの復元は未実施。独立readback後の復元確認へ引き継ぐ。main統合やサイト配信設定の変更は行わない。
+
+## 2026年10月24日（JST）— #7-209配送・独立検証の後続結果
+
+前節のcommit・push未実施は文書作成時点の歴史的記録であり、以下はその後に成立した結果である。
+
+- 管理5文書をexclusive-createで追加し、限定静的検証・readback・PUBLIC安全確認を実施。全件`added`。
+- 追加commit：`1d89ea1f6f3dbca5119e15652dee3764f1b8fb20`。親は導入前基準`5db247a7be18acc349b64921d2daad92e7afee50`。
+- PUBLIC task branchへの通常push成功とGitHub独立readback PASSは、#7-210の承認済み引き継ぎ結果として確認。
+- 新規空チャットからの独立復元PASS。正式Project内の新規空チャットという条件はUSER_UI_ATTESTEDであり、Git実測・内部独立証明とは区別。
+- 既存サイト6ファイルのGit blobは全件不変。AERAN Target限定のPUBLIC B方式を維持し、完全なSource→Target対応はアクセス制限されたPRIVATE管理記録で保持。
+- 全体指揮によるA-PROJECT-BOOTSTRAPは今回の実Project導入に限定してPASS。Phase 7 Closeout全体の完成ではない。
+- ブラウザ表示・アプリ動作・Pages配信再検証は未実施。
+
+## 2026年10月24日（JST）— #7-210状態文書3件の整合
+
+**実施範囲**
+
+`CURRENT-HANDOFF.md`、`STATUS.md`、`WORKLOG.md`のみを更新し、#7-209の完了実績と作成時点の記録を区別した。既存の日付付き履歴は保持した。
+
+**編集前の確認**
+
+固定task HEAD・親・local main・origin/main、clean・untrackedなし、lock・進行中Git操作・他worktree競合なしを確認。限定read-only remote照会でmainとtaskの2refが固定開始SHAに一致した。通常ファイル・metadata・Git副作用条件を確認し、既存6サイトファイルの基準blob一致を確認した。
+
+**編集後の確認**
+
+差分が指定3文書のみであること、UTF-8/LF・見出し・参照先、内容readback、PUBLIC安全、歴史的記録との時点区別、Git差分整合を確認した。AGENTS.md・DECISIONS.mdと既存6サイトファイルは不変。
+
+**記録作成時点と次工程**
+
+今回の追加commit・task push・main FF-only統合は本記録作成時点では未実施。編集後のPUBLIC安全・静的検証、指定3件のみのstageとstaged差分検証を通過した場合に、追加commit最大1回・既存task branchへの通常push最大1回を行う。完了したGit配送は最終的にGit履歴と作業完了報告で確認する。
+
+第1段階配送後のGitHub独立readbackは別工程であり、この編集では未実施。第2段階はそのPASS結果、明示された続行指示、fresh資格確認を前提とする。main統合・サイト変更・配信設定変更は今回行わない。

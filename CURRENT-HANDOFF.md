@@ -20,27 +20,29 @@ iPhoneアプリ本体の開発や個人のGoogle Calendarデータ管理は、�
 
 ## 確認済みの現在地
 
-2026年10月24日時点の公開GitHub mainでは、サイトを構成する6ファイルを確認済み。標準管理Markdown 5文書は存在していなかった。
+導入前の公開main基準では既存サイト6ファイルが存在し、標準管理Markdown 5文書は存在していなかった。
 
-公開内容とAERAN限定のprovenance B方式は承認済み。2026年10月24日、`task/7-209-aeran-public-bootstrap`で標準管理文書5件を非破壊追加した。既存サイト6ファイルは変更していない。
+2026年10月24日、#7-209で`task/7-209-aeran-public-bootstrap`へ標準管理文書5件を非破壊追加し、commit `1d89ea1f6f3dbca5119e15652dee3764f1b8fb20`として通常pushを完了した。GitHub側の独立readbackはPASS（承認済み引き継ぎ結果）。既存サイト6ファイルは全件Git blob不変。
 
-本記録のファイル作成時点ではcommit・pushは未実施。最終的なcommit・配送結果はGit履歴と作業完了報告で確認する。
+独立した新規空チャットからのProject復元はPASS。正式Project内の新規空チャットであることはUSER_UI_ATTESTEDであり、Git実測や内部独立証明とは区別する。
 
-GitHub上の確認結果と、個々のPCの現在のローカル状態は区別する。
+AERAN PUBLIC Target限定のprovenance B方式を維持し、完全なSource→Target対応はアクセス制限されたPRIVATE管理記録で保持する。全体指揮によるA-PROJECT-BOOTSTRAPの今回の実Project導入は限定PASS。Phase 7 Closeout全体の完成は宣言しない。
+
+ブラウザ表示・アプリ動作・Pages配信再検証は未実施。
 
 ## 次に行う作業
 
-5文書のreadback・静的検証・PUBLIC安全確認と既存6ファイルのblob不変確認は実施済み。指定5文書のstage後に差分検証し、承認されたtask branchへのcommit・通常pushを行う。配送後はGitHub側で独立readbackを行い、その後に本人が正式Project内で新しい空チャットを作成して復元を確認する。
+#7-210では`CURRENT-HANDOFF.md`、`STATUS.md`、`WORKLOG.md`のみを整合する。本文編集時点では#7-210の追加commit・task push・main統合は未実施。実際の配送結果はGit履歴と作業完了報告で確認する。
 
-main統合、サイト配信設定の変更は承認範囲に含めない。
+第1段階は静的検証後の追加commit最大1回と既存task branchへの通常push最大1回まで。続くGitHub側の独立readbackを待つ工程境界で終了する。
+
+第2段階のmain FF-only統合は一括承認範囲に含まれるが、独立readback PASS、明示された続行指示、fresh Git・security資格確認を必要とする。再開時には現在のGit refs・履歴・承認scopeを再確認し、本文内のSHAを将来の現在値と決め打ちしない。サイト配信設定変更は対象外。
 
 ## 未解決事項
 
-- staged差分検証、commit・pushの最終結果の確認
-- GitHub側の独立readback
-- 過去チャットを渡さない新規Codex会話からの引き継ぎ復元
-
-独立readbackと新会話復元は未実施。配送の独立PASS、Bootstrap総合PASSは宣言しない。
+- #7-210の追加commit・task pushの最終結果とGitHub側の独立readback
+- 第2段階のfresh確認、main FF-only統合・通常push、正式mainの独立readback
+- ブラウザ表示・アプリ動作・Pages配信の再検証（今回の対象外）
 
 ## 再開時の確認順序
 

@@ -8,7 +8,7 @@
 
 目的：個人利用向けiPhoneアプリ「AERAN Calendar」の案内、プライバシーポリシー、利用案内を掲載する静的Webサイトの保守。
 
-公開GitHub mainの確認済み基準commit：`5db247a7be18acc349b64921d2daad92e7afee50`
+標準管理文書導入前の公開GitHub main基準commit：`5db247a7be18acc349b64921d2daad92e7afee50`
 
 作業するPCのGit rootとCodex Desktopの作業先は、各セッションで確認する。端末固有の絶対パス・権限情報は公開管理しない。
 
@@ -41,26 +41,30 @@ AERAN PUBLIC Targetに限定したprovenance B方式は承認済み。この公�
 
 `pending`は、上記基準時点では導入を実施していないという意味である。`added`は事前不存在の確認後、承認された作業で実際に追加した場合だけ記録する。既存ファイルを保持した場合は`kept`、明示承認された差分だけ統合した場合は`merged`とする。
 
-2026年10月24日、`task/7-209-aeran-public-bootstrap`で5件を新規追加した。本記録のファイル作成時点ではcommit・pushは未実施。最終結果はGit履歴と作業完了報告で確認する。導入前の事実は`WORKLOG.md`に保持し、存在しないcommitやGit blobを推測で記載しない。
+2026年10月24日、#7-209で`task/7-209-aeran-public-bootstrap`へ5件を新規追加し、commit `1d89ea1f6f3dbca5119e15652dee3764f1b8fb20`としてPUBLIC task branchへの通常pushを完了した。GitHub独立readback PASSは承認済み引き継ぎ結果である。導入前と作成時点の記録は`WORKLOG.md`に保持する。
 
 ## 完成済み・確認済み
 
-- GitHub上に公開サイト用の6ファイルが存在することを確認。
-- サイトはアプリ案内、プライバシーポリシー、利用案内を対象とする。
-- 標準管理文書の導入前基準commitを確認。
+- 標準5文書をexclusive-createで追加し、全件`added`を維持。
+- 5文書のreadback、UTF-8/LF、Markdown構造、相対ファイル参照、PUBLIC安全確認を実施済み。
+- #7-209のtask commit・通常pushとGitHub側の独立readback PASS。
+- 新規独立会話からのProject復元PASS。正式Projectの新規空チャットであることはUSER_UI_ATTESTEDであり、Git実測・内部独立証明とは区別する。
+- 既存Web6ファイルは導入前基準とGit blob全件不変。AERAN Target限定のPUBLIC provenance B方式を維持。
+- 全体指揮によるA-PROJECT-BOOTSTRAPは今回の実Project導入に限定してPASS。Phase 7 Closeout全体の完成は本書では宣言しない。
 
-これらはrepository構成の確認結果であり、ブラウザ表示、アプリ動作、認証機能の検証結果ではない。
+これらはブラウザ表示、アプリ動作、認証機能、Pages配信の再検証結果ではない。
 
 ## 作業中
 
-- 承認済み管理文書5件を追加・readback済み。UTF-8/LF、Markdown構造、相対ファイル参照、PUBLIC安全確認、既存6ファイルのblob不変を検証済み。stage後の差分検証とtask branchへの限定配送を行う段階。
+#7-210第1段階として状態文書3件を最小整合する。本文編集時点では今回の追加commit・task push・main統合は未実施。後続の配送結果は実際のGit履歴と作業完了報告で確認する。
 
 ## 未着手・未完了
 
-- staged差分検証とGit配送の最終結果確認
-- GitHub側の独立readback
-- 独立した新規Codex会話からのProject復元検証
-- 既存Webページの変更を伴う保守作業
+- #7-210の追加commit・task pushの最終結果確認とGitHub側の独立readback
+- 独立readback後の続行指示とfresh資格確認を前提とするmain FF-only統合・通常push
+- GitHub正式mainの独立readback
+- ブラウザ表示・アプリ動作・Pages配信再検証（未実施）
+- 既存Webページの変更を伴う保守作業（今回の対象外）
 
 ## 通常の静的検証方法
 
@@ -70,6 +74,6 @@ AERAN PUBLIC Targetに限定したprovenance B方式は承認済み。この公�
 
 ## 次の主要マイルストーン
 
-承認済みの5文書を静的検証し、task branchへ限定配送する。GitHub側の独立readback後、新規Codex会話で5文書から現在地を復元できることを確認する。
+#7-210第1段階の3文書整合・静的検証・task branchへの限定配送後、GitHub独立readbackを待つ。PASS結果と明示された続行指示を受け、fresh Git・security確認後に第2段階のmain FF-only統合へ進む。現在のHEADやremote mainは、導入前基準SHAから推測せず、その都度Gitで確認する。
 
 既存サイトの公開内容・配信設定の変更は、このマイルストーンに含めない。
